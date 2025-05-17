@@ -1,0 +1,176 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Profil Saya</title>
+    <!-- Link CSS Bootstrap online -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" 
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top" style="background-color: rgb(70, 9, 70);">
+      <div class="container-fluid">
+        <a class="navbar-brand text-white" href="#">Profil Saya</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active text-white" aria-current="page" href="#home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="#about">Siapa Aku</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="#hobby">Hobi</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="#contact">Kontak</a>
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-light" type="submit">Cari</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Jumbotron / Welcome Section -->
+    <section
+      id="home"
+      class="pt-5"
+      style="margin-top: 70px; background-color: #ffe6f0; padding: 60px 20px; text-align: center"
+    >
+      <div class="container">
+        <h1 class="display-4" style="font-weight: 700; color: #491f58">
+          Selamat Datang di Profil Saya
+        </h1>
+        <p class="lead" style="color: #6c757d; font-size: 1.25rem">
+          Halo! Saya senang berbagi tentang diri saya, hobi, dan cerita hidup saya.
+        </p>
+        <img 
+          src="{% static 'img/Profill.jpg' %}" 
+          alt="Foto Profil" 
+          class="img-fluid mt-4"
+          style="width: 100%; max-width: 400px; height: auto; object-fit: cover; display: block; margin: 0 auto;"
+        />
+      </div>
+    </section>
+
+    <!-- Siapa Aku -->
+    <section
+      id="about"
+      class="py-5"
+      style="background-color: #fff0f6"
+    >
+      <div class="container" style="max-width: 800px">
+        <h2 class="text-center mb-4" style="color: #491f58">
+          Siapa Aku
+        </h2>
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">Nama: <span style="color:#605f62;">[Khodijah Hasim Murad]</span></h5>
+            <p class="card-text">
+               Saya lahir di <strong>Arab Saudi, Makkah</strong>, kota suci yang penuh sejarah dan keberkahan. Kini, saya adalah seorang mahasiswa di <strong>Institut Asia Malang</strong>, jurusan Teknik Informatika. Saya menjalani hari-hari dengan semangat belajar yang tinggi dan rasa ingin tahu yang tak pernah padam. 
+               Setiap tantangan saya lihat sebagai peluang untuk tumbuh dan setiap kesalahan sebagai pelajaran yang berharga.
+            </p>
+            <p class="card-text">
+               Cerita hidup saya adalah perjalanan penuh warna — dari masa kecil yang hangat, hingga petualangan sebagai mahasiswa yang terus mengejar impian. Saya percaya bahwa mimpi besar bisa diraih melalui kerja keras, doa, dan ketulusan hati.
+            </p>
+            <p class="card-text">
+               Selain menyukai dunia teknologi, saya juga mencintai kreativitas. Saya suka menuangkan ide dalam bentuk tulisan, seni, dan desain. Hidup bagi saya bukan hanya tentang tujuan, tapi tentang proses, pengalaman, dan dampak positif yang bisa saya berikan untuk orang lain.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Hobi -->
+    <section
+      id="hobby"
+      class="py-5"
+      style="background-color: #f8f9fa"
+    >
+      <div class="container" style="max-width: 800px">
+        <h2 class="text-center mb-4" style="color:  #491f58">
+          Hobi Saya
+        </h2>
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+          <div class="col">
+            <div class="card h-100 text-center">
+              <img src="{% static 'img/buku.jpg' %}" class="card-img-top mx-auto mt-3" alt="Musik" style="width: 60px; height: 60px" />
+              <div class="card-body">
+                <h5 class="card-title">Membaca</h5>
+                <p class="card-text">Saya suka membaca buku, terutama novel dan buku pengembangan diri.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100 text-center">
+              <img src="{% static 'img/BALI.jpg' %}" class="card-img-top mx-auto mt-3" alt="Musik" style="width: 60px; height: 60px" />
+              <div class="card-body">
+                <h5 class="card-title">Traveling</h5>
+                <p class="card-text">Menjelajah tempat baru dan mengenal budaya yang berbeda adalah hal yang saya sukai.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100 text-center">
+              <img src="{% static 'img/Musik.jpg' %}" class="card-img-top mx-auto mt-3" alt="Musik" style="width: 60px; height: 60px" />
+              <div class="card-body">
+                <h5 class="card-title">Musik</h5>
+                <p class="card-text">Mendengarkan musik dan bermain alat musik adalah cara saya melepas penat.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Kontak -->
+    <section
+      id="contact"
+      class="py-5 text-center"
+      style="background-color: #ffe6f0"
+    >
+      <div class="container" style="max-width: 600px">
+        <h2 class="mb-4" style="color:  #491f58"#d6336c; font-weight: 700">Kontak Saya</h2>
+        <p>Anda dapat menghubungi saya melalui media sosial berikut:</p>
+        <a href="https://instagram.com/k_zll9" target="_blank" class="btn btn-outline-primary mx-2">
+          Instagram
+        </a>
+        <a href="mailto:emailanda@example.com" class="btn btn-outline-primary mx-2">
+          Email
+        </a>
+      </div>
+    </section>
+
+    <!-- Footer -->
+   <footer style="background-color: rgb(70, 9, 70); color: white;" class="text-center py-3 fixed-bottom">
+    &copy; 2025 Profil Saya
+   </footer>
+  
+
+    <!-- Link JS Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" 
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  </body>
+</html>
